@@ -100,9 +100,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Facet.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="MainFrm.h" />

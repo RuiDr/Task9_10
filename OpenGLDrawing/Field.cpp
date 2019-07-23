@@ -16,7 +16,6 @@ Field::Field(CWnd* pParent /*=nullptr*/)
 	, m_point(0)
 	, field(0)
 {
-
 }
 
 Field::~Field()
