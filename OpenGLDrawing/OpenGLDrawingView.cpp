@@ -385,8 +385,6 @@ BOOL COpenGLDrawingView::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 	return CView::OnMouseWheel(nFlags, zDelta, pt);
 	
 }
-
-
 void COpenGLDrawingView::OnMouseMove(UINT nFlags, CPoint point)
 {
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
@@ -403,8 +401,6 @@ void COpenGLDrawingView::OnMouseMove(UINT nFlags, CPoint point)
 	};
 	CView::OnMouseMove(nFlags, point);
 }
-
-
 void COpenGLDrawingView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
@@ -557,11 +553,10 @@ void COpenGLDrawingView::OnFileSaveAs()
 		TCHAR targetPath[MAX_PATH];
 		SHGetPathFromIDList(targetLocation, targetPath);
 		path = targetPath;
-		path += "//result.ply";
+		path += "//test.ply";
 		writeFile(path, model.modelFacet, model.modelPoint);
 	}
 }
-
 void writeFile(CString path, map<int, Facet>mapFacet, map<int, MyPoint>mapPoint)
 {
 	ofstream OpenFile(path);
@@ -679,8 +674,10 @@ void COpenGLDrawingView::OnField()
 	Field f;
 	if (f.DoModal()==IDOK)
 	{
+		// 获取输入框中的值
 		index = f.m_point;
 		field = f.field;
+		// 领域计算
 		GetFieldcirculation(index, field);
 		Invalidate();
 	}

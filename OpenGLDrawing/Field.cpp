@@ -17,19 +17,15 @@ Field::Field(CWnd* pParent /*=nullptr*/)
 	, field(0)
 {
 }
-
 Field::~Field()
 {
 }
-
 void Field::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Text(pDX, IDC_EDIT1, m_point);
 	DDX_Text(pDX, IDC_EDIT2, field);
 }
-
-
 BEGIN_MESSAGE_MAP(Field, CDialogEx)
 	ON_BN_CLICKED(IDOK, &Field::OnBnClickedOk)
 END_MESSAGE_MAP()
