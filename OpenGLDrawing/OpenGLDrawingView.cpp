@@ -582,8 +582,6 @@ void writeFile(CString path, map<int, Facet>mapFacet, map<int, MyPoint>mapPoint)
 	for (auto iter = model.modelFacet.begin(); iter != model.modelFacet.end(); iter++)
 	{
 		OpenFile << " " << 3 << " " << iter->second._vertex_1.index << " " << iter->second._vertex_2.index << " " << iter->second._vertex_3.index << endl;
-	
-
 	}
 }
 double GetVolume()
